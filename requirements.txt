@@ -1,0 +1,9 @@
+Flask
+transformers
+tensorflow-macos
+tensorflow-metal
+tensorflow-datasets
+scipy
+torch
+torchvision
+torchaudio
