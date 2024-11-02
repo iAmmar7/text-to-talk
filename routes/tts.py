@@ -16,6 +16,8 @@ def text_to_speech():
         return jsonify({"error": "No text provided"}), 400
 
     text = data['text']
+
+    # Choose the voice
     voice_preset = "v2/en_speaker_6"
 
     # Process the input text with a specific voice preset to prepare it for the model.
@@ -31,6 +33,7 @@ def text_to_speech():
     sample_rate = model.generation_config.sample_rate
     output = "output.wav"
 
+    # Write the audio file
     scipy.io.wavfile.write(output, rate=sample_rate, data=audio_array)
 
     # Return the audio file
