@@ -1,5 +1,3 @@
-# app/routes/text_summarization.py
-
 from fastapi import APIRouter, HTTPException
 from transformers import pipeline
 from app.schemas import TextSummarizationRequest

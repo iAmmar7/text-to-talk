@@ -2,3 +2,4 @@ fastapi           # FastAPI framework for building APIs
 uvicorn           # ASGI server to run FastAPI
 transformers      # Hugging Face Transformers library for NLP models
 pytorch           # PyTorch for model computations
+scipy             # A scientific computing package for Python
