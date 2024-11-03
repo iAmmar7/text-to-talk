@@ -1,9 +1,4 @@
-Flask
-transformers
-tensorflow-macos
-tensorflow-metal
-tensorflow-datasets
-scipy
-torch
-torchvision
-torchaudio
+fastapi           # FastAPI framework for building APIs
+uvicorn           # ASGI server to run FastAPI
+transformers      # Hugging Face Transformers library for NLP models
+pytorch           # PyTorch for model computations

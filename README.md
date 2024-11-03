@@ -1,3 +1,5 @@
 # text-to-talk
 
-Convert your text into audio.
+- Summarize your text
+- Convert your text into speech
+- Get the text summary in audio
