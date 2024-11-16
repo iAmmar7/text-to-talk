@@ -1,5 +1,13 @@
 # text-to-talk
 
+**Text-to-Talk** is a FastAPI application providing APIs for text summarization and text-to-speech conversion. It utilizes pre-trained models from Hugging Face's Transformers library and the Bark model for TTS.
+
+## Features
+
+- Summarize text using the BART model.
+- Convert text to speech using the Bark model.
+- Combine text summarization and text-to-speech into one endpoint.
+
 - Summarize your text
 - Convert your text into speech
 - Get the text summary in audio
