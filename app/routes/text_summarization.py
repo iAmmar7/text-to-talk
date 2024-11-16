@@ -27,14 +27,13 @@ async def summarize_text(request: TextSummarizationRequest):
             detail="`min_length` cannot be greater than `max_length`."
         )
 
-    input_length = len(request.text.split())
-
-    # Validate that min_length and max_length are within input length
-    min_length = min(request.min_length, input_length)
-    max_length = min(request.max_length, input_length)
-
-    # Generate the summary with the validated min_length and max_length
     try:
+        # Validate that min_length and max_length are within input length
+        input_length = len(request.text.split())
+        min_length = min(request.min_length, input_length)
+        max_length = min(request.max_length, input_length)
+
+        # Generate the summary with the validated min_length and max_length
         summary = summarizer(
             request.text,
             max_length=max_length,

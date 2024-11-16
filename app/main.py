@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import health, text_summarization, text_to_speech
+from app.routes import health, text_summarization, text_to_speech, summarize_to_speech
 
 app = FastAPI(title="Text-to-talk API")
 
@@ -9,5 +9,8 @@ app.include_router(text_summarization.router, prefix="/api",
                    tags=["text summarization"])
 app.include_router(text_to_speech.router, prefix="/api",
                    tags=["text to speech"])
+app.include_router(summarize_to_speech.router,
+                   prefix="/api", tags=["summarize to speech"])
+
 
 # Run the app with `uvicorn app.main:app --reload`

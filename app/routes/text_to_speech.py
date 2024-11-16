@@ -7,7 +7,7 @@ from app.schemas import TextToSpeechRequest
 processor = AutoProcessor.from_pretrained("suno/bark")
 model = AutoModel.from_pretrained("suno/bark")
 
-# Create a router for the text summarization API
+# Create a router for the text to speech API
 router = APIRouter()
 
 
