@@ -93,3 +93,7 @@ The client will be available at <http://localhost:5173>.
 1. Start the backend server first.
 2. Start the frontend client.
 3. Open <http://localhost:5173> in your browser to interact with the application.
+
+## Sanpshots
+<img width="979" alt="Screenshot 2024-11-17 at 8 14 57 PM" src="https://github.com/user-attachments/assets/112e8028-1855-4bc1-9af9-9a364868ee46">
+
