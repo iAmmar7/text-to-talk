@@ -1,4 +1,4 @@
-export const MIN_TEXT_LENGTH = 30;
+export const MIN_TEXT_LENGTH = 100;
 export const MAX_TEXT_LENGTH = 1000;
 export const API_URL = 'http://localhost:8000/api';
 

@@ -15,6 +15,10 @@ const App = () => {
   const [cachedText, setCachedText] = useState(SAMPLE_TEXT);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  const isTextValid =
+    text.trim().length > MIN_TEXT_LENGTH &&
+    text.trim().length < MAX_TEXT_LENGTH;
+
   const playAudio = () => {
     if (audioRef.current) {
       audioRef.current.play();
@@ -29,7 +33,7 @@ const App = () => {
   };
 
   const handleSend = async () => {
-    if (text.trim().length < MIN_TEXT_LENGTH) {
+    if (!isTextValid) {
       alert('Text length should be in range!');
       return;
     }
@@ -115,7 +119,7 @@ const App = () => {
             <button
               className='flex items-center justify-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 active:bg-blue-700 disabled:bg-gray-500 border-none'
               onClick={handleSend}
-              disabled={isSending || text.trim().length < MIN_TEXT_LENGTH}
+              disabled={isSending || !isTextValid}
             >
               <span className='w-5'>
                 {isSending ? (
