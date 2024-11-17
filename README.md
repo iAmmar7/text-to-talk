@@ -8,11 +8,15 @@
 - Convert text to speech using the Bark model.
 - Combine text summarization and text-to-speech into one endpoint.
 
-- Summarize your text
-- Convert your text into speech
-- Get the text summary in audio
-
 ## Installation and Setup
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js** (for the client)
+- **Python 3.9+** (for the server)
+- **Git** (for cloning the repository)
 
 Follow these steps to set up and run the application:
 
@@ -22,37 +26,70 @@ Clone this repository to your local machine:
 
 ```bash
 git clone https://github.com/iAmmar7/text-to-talk.git
-```
-
-### 2. Navigate to the Project Directory
-
-```bash
 cd text-to-talk
 ```
 
-### 3. Set Up a Virtual Environment
+### 2. Server (Backend)
+
+#### Navigate to the Server Directory
 
 ```bash
-python3 -m venv venv
-# Activate the virtual environment
-source venv/bin/activate  # For Windows: venv\Scripts\activate
+cd server
 ```
 
-### 4. Install Dependencies
+#### Set Up a Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Linux/Mac
+venv\Scripts\activate     # On Windows
+```
+
+#### Install Server Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Run the Application
+#### Run the Server
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-### 6. Access the API
+The server will be available at <http://localhost:8000>
+
+#### Access the API
 
 Once the application is running, you can access the API documentation at:
 
 Swagger UI: <http://127.0.0.1:8000/docs>
 ReDoc: <http://127.0.0.1:8000/redoc>
+
+### 3. Client (Frontend)
+
+#### Navigate to the Client Directory
+
+```bash
+cd client
+```
+
+#### Install Client Dependencies
+
+```bash
+npm install
+```
+
+#### Run the client
+
+```bash
+npm run dev
+```
+
+The client will be available at <http://localhost:5173>.
+
+## Usage
+
+1. Start the backend server first.
+2. Start the frontend client.
+3. Open <http://localhost:5173> in your browser to interact with the application.
