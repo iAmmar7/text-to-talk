@@ -1,6 +1,6 @@
 # text-to-talk
 
-**Text-to-Talk** is a FastAPI application providing APIs for text summarization and text-to-speech conversion. It utilizes pre-trained models from Hugging Face's Transformers library and the Bark model for TTS.
+**Text-to-Talk** is a FastAPI application providing APIs for text summarization and text-to-speech conversion. It utilizes pre-trained models from Hugging Face's Transformers library using the Facebook's BART and the Suno Bark model for TTS.
 
 ## Features
 
